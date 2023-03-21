@@ -25,8 +25,8 @@ export default function Users() {
 
   return (
     <div>
-      <h1>{state.saudacao}</h1>
       <Sidebar />
+      <h1>{state.saudacao}</h1>
     </div>
   );
 }

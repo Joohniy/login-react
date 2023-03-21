@@ -8,6 +8,14 @@ import './sidebar.css';
 
 export default function Sidebar() {
   return (
-    <div className="sidebar">assa</div>
+    <div className="sidebar-container">
+      <div className="sidebar">
+        <span className="menu">Menu</span>
+        <a href="/especial" className="sidebar-links">Users</a>
+        <a className="sidebar-links">Gostos preferidos</a>
+        <a className="sidebar-links">Musicas</a>
+        <a className="sidebar-links">Livros</a>
+      </div>
+    </div>
   );
 }

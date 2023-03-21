@@ -43,8 +43,8 @@
   height: 4em;
   width: 100%;
   border-radius: 0.25em;
-  text-align: center;
-  padding: 2em;
+  text-align: left;
+  padding: 5px 15px;
   margin: 1em;
 }
 
