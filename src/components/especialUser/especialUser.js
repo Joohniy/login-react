@@ -33,7 +33,7 @@ export default function EspecialUser() {
   };
 
   return (
-    <div className="container">
+    <div className="container-table">
       <table>
         <thead>
           <tr>
@@ -61,7 +61,7 @@ export default function EspecialUser() {
           })}
         </tbody>
       </table>
-      <a href="/"><h3>Voltar</h3></a>
+      <a href="/" className="btn-voltar"><h3>Voltar</h3></a>
     </div>
   );
 }

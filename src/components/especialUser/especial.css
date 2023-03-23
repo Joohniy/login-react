@@ -13,10 +13,23 @@
 
 }
 
+.container-table {
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 table {
-  font-family: arial, sans-serif;
+  border-spacing: 1;
   border-collapse: collapse;
-  width: 100%;
+  background:white;
+  border-radius:6px;
+  overflow:hidden;
+  max-width:800px;
+  width:100%;
+  margin:0 auto;
+  position:relative;
 }
 
 td,

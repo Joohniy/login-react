@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import Axios from 'axios';
+import Cookies from 'universal-cookie';
 
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -10,8 +11,10 @@ export default function FormLogin() {
   const navigate = useNavigate();
   const { state } = useLocation();
 
+  const cookies = new Cookies();
+
   const [values, setValues] = React.useState();
-  const [id, setId] = React.useState([]);
+  const [user, setUser] = React.useState([]);
   const [token, setToken] = React.useState();
 
   const handleChanges = (value) => {
@@ -27,24 +30,33 @@ export default function FormLogin() {
       senha: values.senha,
     }, {
       headers: { authorization: `${token}` },
+    }, {
+      withCredentials: true,
     })
       .then((res) => {
-        setId(res.data.users);
+        setUser(res.data.users);
         setToken(res.data.token);
       })
       .catch((e) => { console.log(e, 'Algo deu errado...'); });
   };
 
   useEffect(() => {
-    if (id._id) {
+    cookies.set('token', token, {
+      path: '/',
+      maxAge: 3600,
+    });
+  });
+
+  useEffect(() => {
+    if (user._id) {
       navigate({
         pathname: '/users/id',
-        search: `${id._id}`,
-      }, { state: { saudacao: `Olá ${id.name}`, authToken: `${token}` } });
+        search: `${user._id}`,
+      }, { state: { saudacao: `Olá ${user.name}`, authToken: `${token}` } });
     } else {
       navigate('/');
     }
-  }, [id]);
+  }, [user]);
 
   return (
     <div className="div-login">

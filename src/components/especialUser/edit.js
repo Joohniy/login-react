@@ -36,7 +36,7 @@ export default function Edit() {
 
   return (
     <div>
-      <form action="#" className="form-edit" name="formed">
+      <form action="#" className="form-edit" name="formEdit">
         <h1>{`Olá ${state.name}, oque deseja alterar?`}</h1>
         <input
           type="text"
