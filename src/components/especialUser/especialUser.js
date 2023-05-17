@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import Axios from 'axios';
 
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 import './especial.css';
 
@@ -10,7 +10,6 @@ export default function EspecialUser() {
   const [data, setData] = React.useState([]);
 
   const navigate = useNavigate();
-  const state = useLocation();
 
   useEffect(() => {
     Axios.get('http://localhost:3001/especial')

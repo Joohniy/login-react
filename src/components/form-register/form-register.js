@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import Axios from 'axios';
-
-import { useNavigate, useLocation } from 'react-router-dom';
 
 import './form-register.css';
 
@@ -16,8 +14,6 @@ export default function FormRegister() {
       [value.target.name]: value.target.value,
     }));
   };
-  const navigate = useNavigate();
-  const { state } = useLocation();
 
   const handleSubmit = () => {
     Axios.post('http://localhost:3001/register', {

@@ -9,7 +9,6 @@ import './users.css';
 import Sidebar from '../sidebar/sidebar';
 
 export default function Users() {
-  const navigate = useNavigate();
   const { state } = useLocation();
 
   const [data, setData] = React.useState([]);

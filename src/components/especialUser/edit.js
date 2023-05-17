@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React from 'react';
 
 import Axios from 'axios';
 
@@ -16,6 +16,8 @@ export default function Edit() {
       [value.target.name]: value.target.value,
     }));
   };
+
+  console.log(data);
 
   const { state } = useLocation();
   const navigate = useNavigate();

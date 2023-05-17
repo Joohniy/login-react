@@ -48,3 +48,26 @@
   background-color: #492388;
   color: white;
 }
+
+.btn-logout {
+ color: black;
+ padding: 16px;
+ display: flex;
+ align-items: center ;
+ justify-content: center;
+ width: 95%;
+ height: 5em;
+ margin-top: 30em;
+ font-family: cursive;
+ font-size: medium;
+ box-shadow: 0 0.200em;
+ color: #1a191d;
+ border: none;
+ border-radius: 0.25em;
+ cursor: pointer;
+}
+
+.btn-logout:hover {
+  background-color: rgb(199, 197, 195);
+  transition: 600ms;
+}
